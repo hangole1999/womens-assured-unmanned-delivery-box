@@ -7,8 +7,6 @@ import mutations from './mutations';
 
 Vue.use(Vuex);
 
-state.curLanguage = state.languages[0];
-
 const store = new Vuex.Store({
   state: state,
   mutations: mutations,
@@ -20,4 +18,4 @@ export default store;
 
 Vue.use(store);
 
-store.dispatch('syncLocalStorage', {});
+// store.dispatch('syncLocalStorage', {});

@@ -1,14 +1,20 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+  <v-app id="app">
+    <v-progress-linear v-if="$store.getters.progress.show" :indeterminate="true" class="main-progress" height="2"></v-progress-linear>
+    <v-snackbar v-model="$store.getters.snackbar.show" :color="$store.getters.snackbar.color" :multi-line="$store.getters.snackbar.mode === 'multi-line'" :timeout="$store.getters.snackbar.timeout" :vertical="$store.getters.snackbar.mode === 'vertical'" top right>
+      {{ $store.getters.snackbar.message }}
+      <v-btn dark flat @click="$store.getters.snackbar.show = false">Close</v-btn>
+    </v-snackbar>
+    <v-content>
+      <router-view />
+    </v-content>
+  </v-app>
 </template>
 
 <script>
 export default {
   name: 'App'
-}
+};
 </script>
 
 <style>
@@ -36,7 +42,6 @@ export default {
 
 html, body {
   margin: 0px;
-  background: black;
   color: white;
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
@@ -45,5 +50,13 @@ html, body {
 a {
   color: inherit !important;
   text-decoration: none !important;
+}
+
+#app {
+  background-color: #fedbf8;
+}
+
+.full-height {
+  height: 100%;
 }
 </style>
