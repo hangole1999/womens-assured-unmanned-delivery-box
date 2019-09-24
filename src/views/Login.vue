@@ -2,14 +2,17 @@
   <v-container class="login full-height">
     <v-layout column class="full-height">
       <v-flex>
-        <v-layout class="full-height" justify-center align-center>
-          <span>로그인</span>
+        <v-layout class="full-height display-1 dohyeon" column justify-center>
+          <div><span class="text-back">여성 안심 무인 택배함</span> 을</div>
+          <div>이용하기에 앞서,</div>
+          <div>고객님의 안전을 위해</div>
+          <div>비밀번호를 입력받을께요 !</div>
         </v-layout>
       </v-flex>
       <v-flex>
         <v-layout class="full-height" column justify-center align-space-between>
-          <span v-text="$store.getters.identity"></span>
-          <v-text-field label="비밀번호" filled clearable></v-text-field>
+          <div class="dohyeon"><span v-text="$store.getters.identity" /> 에 해당하는 비밀번호를 입력해주세요</div>
+          <v-text-field label="비밀번호" type="password" filled clearable></v-text-field>
         </v-layout>
       </v-flex>
       <v-flex>

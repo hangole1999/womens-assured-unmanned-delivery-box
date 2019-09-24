@@ -66,12 +66,19 @@ a {
   background-color: rgb(254, 215, 49);
 }
 
-.dohyeon {
+.dohyeon,
+.dohyeon * {
   font-family: 'Do Hyeon', sans-serif;
 }
 
-.jua {
+.jua,
+.jua * {
   font-family: 'Jua', sans-serif;
+}
+
+.text-back {
+  background: black;
+  color: white;
 }
 
 .full-height {

@@ -2,8 +2,10 @@
   <v-container class="delivery full-height">
     <v-layout column class="full-height">
       <v-flex>
-        <v-layout class="full-height" justify-center align-center>
-          <span class="dohyeon">여성 안심 무인 택배함</span>
+        <v-layout class="full-height display-1 dohyeon" column justify-center>
+          <div>나는 안전한 택배 고민을</div>
+          <div><span class="text-back">여성 안심 무인 택배함</span> 으로</div>
+          <div>해결했다</div>
         </v-layout>
       </v-flex>
       <v-flex>
