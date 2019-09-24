@@ -39,7 +39,6 @@ const storeIdentityAndGoLogin = () => (to, from, next) => {
 };
 
 const router = new Router({
-  mode: 'history',
   routes: [
     {
       path: '/delivery/:identity', // EX) http://xxx.xxx/delivery/0x150f14991f9B890749BB4a635c3C8DF8a1D26b48
