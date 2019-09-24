@@ -3,7 +3,7 @@
     <v-progress-linear v-if="$store.getters.progress.show" :indeterminate="true" class="main-progress" height="2"></v-progress-linear>
     <v-snackbar v-model="$store.getters.snackbar.show" :color="$store.getters.snackbar.color" :multi-line="$store.getters.snackbar.mode === 'multi-line'" :timeout="$store.getters.snackbar.timeout" :vertical="$store.getters.snackbar.mode === 'vertical'" top right>
       {{ $store.getters.snackbar.message }}
-      <v-btn dark flat @click="$store.getters.snackbar.show = false">Close</v-btn>
+      <v-btn dark text @click="$store.getters.snackbar.show = false">Close</v-btn>
     </v-snackbar>
     <v-content>
       <router-view />
@@ -18,6 +18,15 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'Do Hyeon';
+  src: url('./fonts/DoHyeon-Regular.ttf');
+}
+@font-face {
+  font-family: 'Jua';
+  src: url('./fonts/Jua-Regular.ttf');
+}
+
 * {
   outline: none;
   vertical-align: middle;
@@ -53,7 +62,16 @@ a {
 }
 
 #app {
-  background-color: #fedbf8;
+  /* background-color: #fedbf8; */
+  background-color: rgb(254, 215, 49);
+}
+
+.dohyeon {
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+.jua {
+  font-family: 'Jua', sans-serif;
 }
 
 .full-height {

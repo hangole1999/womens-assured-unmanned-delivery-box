@@ -6,8 +6,8 @@ import Vue from 'vue';
 import App from './App';
 import store from './store';
 import router from './router';
+import vuetify from './plugins/vuetify';
 import './plugins/axios';
-import './plugins/vuetify';
 import './plugins/function';
 
 Vue.config.productionTip = false;
@@ -15,6 +15,7 @@ Vue.config.productionTip = false;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  vuetify,
   router,
   store,
   components: {
