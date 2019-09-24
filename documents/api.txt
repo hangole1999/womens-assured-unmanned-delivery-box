@@ -1,0 +1,101 @@
+Api
+
+http://fintechlabml.gachon.ac.kr/create_user
+Request
+{
+    "password" : “0x323432432432” (bytes32)
+}
+
+Response
+{
+    "state": "success",
+    "account": "0xDD7CDe0B89Cc36B0616e21b702FF4b544894D7D8"
+}
+
+
+http://fintechlabml.gachon.ac.kr/register
+Request
+{
+    "account" : "0xDD7CDe0B89Cc36B0616e21b702FF4b544894D7D8",
+    "name": "김기병",
+    "kind": "옷",
+    "home": "방배동 "
+}
+
+Response
+{
+    "state": "success"
+}
+
+http://fintechlabml.gachon.ac.kr/search
+Request
+{
+    "account" : "0xDD7CDe0B89Cc36B0616e21b702FF4b544894D7D8"
+}
+
+Response
+{
+    "0": "김기병”, ( 이름 )
+    "1": "옷”, ( 배송 종류 )
+    "2": “방배동” ( 배송지 )
+    “3”: false ( bool값, 배송 받은 상태 )
+}
+
+http://fintechlabml.gachon.ac.kr/receive
+Request
+{
+    "account" : "0xDD7CDe0B89Cc36B0616e21b702FF4b544894D7D8"
+}
+
+Response
+{
+    "state": "success"
+}
+
+http://fintechlabml.gachon.ac.kr/receive_state
+
+Request
+{
+    "account" : "0xDD7CDe0B89Cc36B0616e21b702FF4b544894D7D8"
+}
+
+Response
+{
+    "state": "success"
+}
+
+http://fintechlabml.gachon.ac.kr/login
+
+Request
+{
+    "account" : "0xcF965406041f298615ca2A59805fCc18037cB517",
+    "password": "okay11234"
+}
+
+Response
+{
+    "login": true (bool값)
+}
+
+http://fintechlabml.gachon.ac.kr/send
+Request
+{
+    "account" : "0xcF965406041f298615ca2A59805fCc18037cB517",
+    "problem" : "사용하는 과정에서 여러모로 불편하고, 또한 주소가 노출되지않는 것은 좋으나 조금더 많은 설치가 필요해보입니다."
+}
+
+Response
+{
+    "state": "success"
+}
+
+http://fintechlabml.gachon.ac.kr/getProblem
+Request
+{
+    "account" : "0xcF965406041f298615ca2A59805fCc18037cB517"
+}
+
+Response
+{
+    "problem": "사용하는 과정에서 여러모로 불편하고, 또한 주소가 노출되지않는 것은 좋으나 조금더 많은 설치가 필요해보입니다."
+}

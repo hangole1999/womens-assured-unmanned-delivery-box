@@ -12,12 +12,12 @@
       <v-flex>
         <v-layout class="full-height" column justify-center align-space-between>
           <div class="dohyeon"><span v-text="$store.getters.identity" /> 에 해당하는 비밀번호를 입력해주세요</div>
-          <v-text-field label="비밀번호" type="password" filled clearable></v-text-field>
+          <v-text-field label="비밀번호" v-model="password" type="password" filled clearable></v-text-field>
         </v-layout>
       </v-flex>
       <v-flex>
         <v-layout class="full-height" justify-center align-center>
-          <v-btn large block color="primary">인증</v-btn>
+          <v-btn large block color="primary" @click="login">인증</v-btn>
         </v-layout>
       </v-flex>
     </v-layout>
@@ -29,7 +29,26 @@ export default {
   name: 'Login',
   data () {
     return {
+      password: ''
     };
+  },
+  methods: {
+    login () {
+      let body = {
+        account: this.$store.getters.identity,
+        password: this.password
+      };
+      console.log(this.password);
+      console.log(body);
+      this.$http.post('http://fintechlabml.gachon.ac.kr/login', body).then((response) => {
+        console.log(response);
+      }).catch((error) => {
+        console.log('error');
+        console.log(error);
+      }).finally(() => {
+        console.log('finally');
+      });
+    }
   }
 };
 </script>
