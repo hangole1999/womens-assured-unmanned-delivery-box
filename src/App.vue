@@ -68,12 +68,12 @@ a {
 
 .dohyeon,
 .dohyeon * {
-  font-family: 'Do Hyeon', sans-serif;
+  font-family: 'Do Hyeon', sans-serif !important;
 }
 
 .jua,
 .jua * {
-  font-family: 'Jua', sans-serif;
+  font-family: 'Jua', sans-serif !important;
 }
 
 .text-back {
