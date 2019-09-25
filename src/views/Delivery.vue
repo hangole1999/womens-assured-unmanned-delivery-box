@@ -12,13 +12,13 @@
         <v-layout class="full-height">
           <v-flex>
             <v-layout class="full-height" justify-center align-center>
-              <v-btn text large to="/check">배송 확인</v-btn>
+              <v-btn class="full-button dohyeon display-1" text large to="/check">배송 확인</v-btn>
             </v-layout>
           </v-flex>
           <v-divider vertical />
           <v-flex>
             <v-layout class="full-height" justify-center align-center>
-              <v-btn text large to="/complaint">민원 접수</v-btn>
+              <v-btn class="full-button dohyeon display-1" text large to="/complaint">민원 접수</v-btn>
             </v-layout>
           </v-flex>
         </v-layout>

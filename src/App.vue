@@ -84,4 +84,9 @@ a {
 .full-height {
   height: 100%;
 }
+
+.full-button {
+  width: 100% !important;
+  height: 100% !important;
+}
 </style>
