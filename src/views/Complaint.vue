@@ -9,7 +9,7 @@
         </v-layout>
       </v-flex>
       <v-flex>
-        <v-textarea name="complaint" label="민원 내용" value="" filled auto-grow clearable autofocus></v-textarea>
+        <v-textarea name="complaint" label="민원 내용" value="" v-model="complaint" filled auto-grow clearable autofocus></v-textarea>
       </v-flex>
       <v-flex>
         <v-layout class="full-height" justify-center align-center>
@@ -25,10 +25,29 @@ export default {
   name: 'Complaint',
   data () {
     return {
+      complaint: ''
     };
   },
   methods: {
     submit () {
+      let body = {
+        account: this.$store.getters.identity,
+        problem: this.complaint
+      };
+      console.log(this.complaint);
+      console.log(body);
+      // this.$http.post('http://fintechlabml.gachon.ac.kr/send', body).then((response) => {
+      //   console.log(response);
+      //   if (response.data.state) {
+      //     this.$router.push('/delivery');
+      //   }
+      // }).catch((error) => {
+      //   console.log('error');
+      //   console.log(error);
+      // }).finally(() => {
+      //   console.log('finally');
+      // });
+      this.$router.push('/delivery');
     }
   }
 };

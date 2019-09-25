@@ -42,6 +42,9 @@ export default {
       console.log(body);
       // this.$http.post('http://fintechlabml.gachon.ac.kr/login', body).then((response) => {
       //   console.log(response);
+      //   if (response.data.login) {
+      //     this.$router.push('/delivery');
+      //   }
       // }).catch((error) => {
       //   console.log('error');
       //   console.log(error);
