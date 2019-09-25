@@ -51,7 +51,13 @@ export default {
       // }).finally(() => {
       //   console.log('finally');
       // });
-      this.$router.push('/delivery');
+      this.$store.dispatch('setPassword', {
+        password: this.password,
+        then: () => {
+          console.log(this.$store.getters.password);
+          this.$router.push('/delivery');
+        }
+      });
     }
   }
 };
